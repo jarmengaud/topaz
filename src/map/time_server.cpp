@@ -32,7 +32,6 @@
 #include "lua/luautils.h"
 #include "entities/charentity.h"
 #include "latent_effect_container.h"
-#include "daily_system.h"
 
 
 int32 time_server(time_point tick,CTaskMgr::CTask* PTask)
@@ -83,7 +82,6 @@ int32 time_server(time_point tick,CTaskMgr::CTask* PTask)
     {
         if (tick > (CVanaTime::getInstance()->lastMidnight + 1h))
         {
-            daily::UpdateDailyTallyPoints();
             CVanaTime::getInstance()->lastMidnight = tick;
         }
     }
