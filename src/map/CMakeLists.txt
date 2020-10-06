@@ -3,7 +3,6 @@ project(topaz)
 
 add_definitions(
     -DdsUDPSERV
-    -DDEBUGLOGMAP
 )
 
 file(GLOB_RECURSE GENERATED_SOURCES CONFIGURE_DEPENDS *.cpp)

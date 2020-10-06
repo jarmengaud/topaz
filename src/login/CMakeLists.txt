@@ -3,7 +3,6 @@ project(topaz)
 
 add_definitions(
     -DdsTCPSERV
-    -DDEBUGLOGLOGIN
 )
 
 file(GLOB GENERATED_SOURCES CONFIGURE_DEPENDS *.cpp)
