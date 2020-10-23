@@ -582,6 +582,7 @@ public:
             func(this, std::forward<Args>(args)...);
         }
     }
+
     template        <typename F, typename... Args>
     void            ForAlliance(F func, Args&&... args)
     {
@@ -668,7 +669,8 @@ public:
     CParty*			PParty;					    // описание группы, в которой состоит сущность
     CBattleEntity*	PPet;					    // питомец сущности
     CBattleEntity*	PMaster;				    // владелец/хозяин сущности (распространяется на все боевые сущности)
-    CBattleEntity*	PLastAttacker;
+    CBattleEntity*  PLastAttacker;
+    time_point      LastAttacked;
 
     std::unique_ptr<CStatusEffectContainer> StatusEffectContainer;
     std::unique_ptr<CRecastContainer> PRecastContainer;
